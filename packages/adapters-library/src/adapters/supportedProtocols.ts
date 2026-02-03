@@ -152,6 +152,8 @@ import { UniswapV4PoolAdapter } from './uniswap-v4/products/pool/uniswapV4PoolAd
 
 import { Eth2ValidatorStakingStakingAdapter } from './eth-2-validator-staking/products/staking/eth2ValidatorStakingStakingAdapter'
 
+import { AnyoneStakingAdapter } from './anyone/products/staking/anyoneStakingAdapter'
+
 export type EvmChainAdapters = Partial<
   Record<EvmChain, (new (input: ProtocolAdapterParams) => IProtocolAdapter)[]>
 >
@@ -248,6 +250,10 @@ export const supportedProtocols: Record<
     // [Chain.Bsc]: [AngleProtocolSavingsAdapter],
     [Chain.Avalanche]: [AngleProtocolSavingsAdapter],
     [Chain.Base]: [AngleProtocolSavingsAdapter],
+  },
+
+  [Protocol.Anyone]: {
+    [Chain.Ethereum]: [AnyoneStakingAdapter],
   },
 
   [Protocol.BalancerV2]: {

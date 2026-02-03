@@ -3,6 +3,7 @@ export const Protocol = {
   AaveV2: 'aave-v2',
   AaveV3: 'aave-v3',
   AngleProtocol: 'angle-protocol',
+  Anyone: 'anyone',
   BalancerV2: 'balancer-v2',
   Beefy: 'beefy',
   CarbonDeFi: 'carbon-defi',
@@ -57,5 +58,6 @@ export type Protocol = (typeof Protocol)[keyof typeof Protocol]
 export const ProtocolDisplayName: Partial<Record<Protocol, string>> = {
   [Protocol.AaveV2]: 'Aave V2',
   [Protocol.AaveV3]: 'Aave V3',
+  [Protocol.Anyone]: 'Anyone Protocol',
   [Protocol.MetaMask]: 'MetaMask Staking',
 } as const
